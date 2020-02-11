@@ -439,3 +439,15 @@ ul.waves li:nth-child(odd){
   color:var(--pastel);
   font-weight: bold;
 }
+.made-with-love{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: .8rem;
+  color: #FFF;
+}
+.made-with-love a{
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+}
