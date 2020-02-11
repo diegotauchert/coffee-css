@@ -3,8 +3,6 @@
 :root{
   --babyblue: #a4bfeb;
   --babydarkblue: #8298bb;
-  --babywild: #5d6d86;
-  --pewterblue: #8cabbe;
   --white:#FFF;
   --brown: #594b50;
   --dark-brown: #2a2426;
@@ -12,8 +10,8 @@
   --wild-gray: #444;
   --pastel: #bba0b2;
   --black: #000;
-  --mug-width: 150px;
-  --mug-height: 180px;
+  --mug-width: 200px;
+  --mug-height: 230px;
   --kettle-width: 125px;
   --kettle-height: 200px;
 }
@@ -27,11 +25,6 @@ body{
   background-color: var(--babyblue);
   background-image:linear-gradient(to right, var(--babyblue), var(--babydarkblue));
   font-family: 'Open Sans Condensed', 'sans-serif';
-  animation-name: body-movin;
-  animation-duration: 8s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
 }
 
 .wrapper{
@@ -156,7 +149,7 @@ ul.smoking li{
   transform: rotate(12deg);
   opacity:0;
   border-radius: 0 100%;
-  animation: smoking 3s linear 10s infinite alternate;
+  animation: smoking 3s linear 7s infinite alternate;
   margin:0 3px;
 }
 ul.waves{
@@ -175,16 +168,15 @@ ul.waves li{
   width: 30px;
   height: calc(var(--mug-width) / 3);
   filter:blur(30px);
+  -webkit-filter: grayscale(0.5) blur(30px);
   transform: scale(1);
-  opacity:.1;
+  opacity:.2;
 }
 ul.waves li:nth-child(even){
-  animation:wavesEven 10s linear;
-  animation-fill-mode: forwards;
+  animation:wavesEven 10s linear 5s forwards;
 }
 ul.waves li:nth-child(odd){
-  animation:wavesOdd 10s linear;
-  animation-fill-mode: forwards;
+  animation:wavesOdd 10s linear 5s forwards;
 }
 
 .table{
@@ -265,7 +257,7 @@ ul.waves li:nth-child(odd){
 .kettle-piece{
   position: absolute;
   right: 30px;
-  top: 22px;
+  bottom: 50px;
   z-index: 22;
   transform:translate(0,0) rotate(0);
 }
@@ -387,8 +379,8 @@ ul.waves li:nth-child(odd){
 }
 
 .kettle-piece{
-  animation: kettle-movin 4s linear 1s 1 normal forwards,
-             turning-bottle 20s ease 5s 1 alternate forwards;
+  animation: kettle-movin 3s linear 1s 1 normal forwards,
+             turning-bottle 20s ease 4s 1 alternate forwards;
 }
 .coffee{
   background-color: var(--dark-brown);
@@ -398,14 +390,14 @@ ul.waves li:nth-child(odd){
   border-radius: 100% 0 0 0;
   position: relative;
   z-index: 99;
-  animation: coffee 9s linear 7s 1 normal;
+  animation: coffee 9s linear 5.5s 1 normal;
 }
 
 .sugar-piece{
   width: 100px;
   position: absolute;
   bottom: 65px;
-  left: 230px;
+  left: 300px;
   height: 20px;
   z-index: 99;
 }
